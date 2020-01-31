@@ -6,7 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>REPLAY</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <script>
+        (function() {
+            var start = new Date;
+            start.setHours(19, 0, 0); // 7 pm 0 min 0 sec
+
+            function pad(num) {
+                var l = parseInt(num).toString().length;
+                l = (l < 2) ? 2 : l; // at least 2 padding
+                return ("0" + parseInt(num)).substr(-l);
+            }
+
+            function tick() {
+                var now = new Date;
+                var remain = ((start - now) / 1000);
+                var hh = pad((remain / 60 / 60));
+                var mm = pad((remain / 60) % 60);
+                var ss = pad(remain % 60);
+                document.getElementById('time').innerHTML = hh + ":" + mm + ":" + ss;
+                setTimeout(tick, 1000);
+            }
+
+            document.addEventListener('DOMContentLoaded', tick);
+        })();
+    </script>
+
 </head>
 
 <body>
@@ -17,7 +44,12 @@
                     <p>Hey You!</p>
                     <span style="font-size: 5rem; font-weight: 300;">
                     	<p style="margin-right: 50px;">It's a free pinball tournament!</p>
-                        <p style="margin-right: 50px;">It starts at 7:00</p>
+                        <div class="container">
+                            <h1>Tournament starts in:</h1>
+                            <ul>
+                                <li><span id="time"></span></li>
+                            </ul>
+                        </div>
                         <p style="margin-right: 50px;">Come sign up :-)</p>
                         
                         
