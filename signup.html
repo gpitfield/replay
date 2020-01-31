@@ -8,61 +8,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
-    <script>
-        (function() {
-            var start = new Date;
-            start.setHours(19, 0, 0); // 7 pm 0 min 0 sec
-
-            function pad(num) {
-                var l = parseInt(num).toString().length;
-                l = (l < 2) ? 2 : l; // at least 2 padding
-                return ("0" + parseInt(num)).substr(-l);
-            }
-
-            function tick() {
-                var now = new Date;
-                var remain = ((start - now) / 1000);
-                var hh = pad((remain / 60 / 60));
-                var mm = pad((remain / 60) % 60);
-                var ss = pad(remain % 60);
-                document.getElementById('time').innerHTML = hh + ":" + mm + ":" + ss;
-                setTimeout(tick, 1000);
-            }
-
-            document.addEventListener('DOMContentLoaded', tick);
-        })();
-    </script>
-
+    <script src="timer.js"></script>
 </head>
 
 <body>
     <section class="hero is-fullheight is-dark">
         <div class="hero-body">
             <div class="container">
-                <div class="title has-text-centered" style="font-size: 8rem;">
-                    <p>Hey You!</p>
-                    <span style="font-size: 5rem; font-weight: 300;">
-                    	<p style="margin-right: 50px;">It's a free pinball tournament!</p>
+                <div class="title has-text-centered">
+                    <h1>Hey You!</h1>
+                    <span class='free'>
                         <div class="container">
-                            <h1>Tournament starts in:</h1>
+                            <h2>Tournament starts in:</h2>
                             <ul>
                                 <li><span id="time"></span></li>
                             </ul>
                         </div>
-                        <p style="margin-right: 50px;">Come sign up :-)</p>
-                        
-                        
+                        <h1>Come sign up!</h1>
+                        <h1>IT'S FREE!</h1>                      
                     </span>
                 </div>
-                <div style="margin-top: 100px;">
-                    <span class="icon" style="font-size: 5rem; transform: rotate(40deg);">
+                <div>
+                    <span class="icon rotate-80-cw">
                         <i class="fas fa-3x fa-hand-point-down"></i>
                     </span>
                 </div>
             </div>
         </div>
     </section>
+
+    
+
 </body>
 
 </html>

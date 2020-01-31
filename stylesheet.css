@@ -1,11 +1,44 @@
-
-li {
-  display: inline-block;
-  font-size: 1.5em;
-  list-style-type: none; 
+li span {
+	display: block;
+	font-size: 3em;
 }
 
-li span {
-  display: block;
-  font-size: 3em;
+h1 {
+	font-size: 8rem;
+}
+
+.free {
+	font-size: 5rem; 
+	font-weight: 300;
+}
+
+.icon {
+	margin-top: 100px;
+	font-size: 5rem; 
+}
+
+.rotate-80-cw {
+	-webkit-animation: rotate-80-cw 1s ease-in-out infinite alternate both;
+	animation: rotate-80-cw 1s ease-in-out infinite alternate both;
+}
+
+@-webkit-keyframes rotate-80-cw {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+}
+@keyframes rotate-80-cw {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
 }
