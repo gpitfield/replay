@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="timer.js"></script>
+    <script src="playerCount.js"></script>
 </head>
 
 <body>
@@ -16,29 +17,28 @@
         <div class="hero-body">
             <div class="container">
                 <div class="title has-text-centered">
-                    <h1>Hey You!</h1>
                     <span class='free'>
                         <div class="container">
-                            <h2>Tournament starts in:</h2>
+                            <h1>Tournament starts in:</h1>
                             <ul>
                                 <li><span id="time"></span></li>
                             </ul>
                         </div>
-                        <h1>Come sign up!</h1>
-                        <h1>IT'S FREE!</h1>                      
+                        <h1>Free to play!</h1>
+                        <h1>Sign up here</h1>                     
                     </span>
                 </div>
                 <div>
                     <span class="icon rotate-80-cw">
                         <i class="fas fa-3x fa-hand-point-down"></i>
                     </span>
+                        <div class='playerCount'>
+                            <p>Players registered tonight: <span id="playerCount"></span></p>
+                        </div>
                 </div>
             </div>
         </div>
     </section>
-
-    
-
 </body>
 
 </html>

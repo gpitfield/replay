@@ -22,6 +22,14 @@ h1 {
 	animation: rotate-80-cw 1s ease-in-out infinite alternate both;
 }
 
+.playerCount {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 5rem;
+}
+
 @-webkit-keyframes rotate-80-cw {
   0% {
     -webkit-transform: rotate(20deg);
