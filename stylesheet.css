@@ -1,0 +1,92 @@
+li span {
+	display: block;
+	font-size: 3em;
+}
+
+h1 {
+	font-size: 8rem;
+}
+
+.startTime {
+	font-size: 5rem; 
+	font-weight: 300;
+}
+
+.freePlay {
+	font-size: 7rem; 
+	font-weight: 5900;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon {
+	margin-top: 140px;
+	font-size: 5rem; 
+}
+
+.rotate-80-cw {
+	-webkit-animation: rotate-80-cw 1s ease-in-out infinite alternate both;
+	animation: rotate-80-cw 1s ease-in-out infinite alternate both;
+}
+
+.signUp {
+	font-size: 10rem;
+	font-weight: 500;
+	margin-left: 190px;
+}
+
+.playerCount {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 5rem;
+
+}
+
+.text-shadow-drop-center {
+	-webkit-animation: text-shadow-drop-center 1s infinite alternate both;
+	        animation: text-shadow-drop-center 1s infinite alternate both;
+}
+
+@-webkit-keyframes text-shadow-drop-center {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 0 18px rgba(0, 0, 0, 1);
+  }
+}
+@keyframes text-shadow-drop-center {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 0 18px rgba(0, 0, 0, 1);
+  }
+}
+
+
+
+@-webkit-keyframes rotate-80-cw {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+}
+@keyframes rotate-80-cw {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+}

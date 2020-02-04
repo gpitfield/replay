@@ -6,28 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>REPLAY</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="timer.js"></script>
+    <script src="playerCount.js"></script>
 </head>
 
 <body>
     <section class="hero is-fullheight is-dark">
         <div class="hero-body">
             <div class="container">
-                <div class="title has-text-centered" style="font-size: 8rem;">
-                    <p>Hey You!</p>
-                    <span style="font-size: 5rem; font-weight: 300;">
-                    	<p style="margin-right: 50px;">It's a free pinball tournament!</p>
-                        <p style="margin-right: 50px;">It starts at 7:00</p>
-                        <p style="margin-right: 50px;">Come sign up :-)</p>
-                        
-                        
+                <div class="title has-text-centered">
+                    <span class='startTime'>
+                        <div class="container">
+                            <h1>Tournament starts in:</h1>
+                            <ul>
+                                <li><span id="time"></span></li>
+                            </ul>
+                        </div>                   
                     </span>
                 </div>
-                <div style="margin-top: 100px;">
-                    <span class="icon" style="font-size: 5rem; transform: rotate(40deg);">
+                <div class='playerCount'>
+                    <p>Players registered tonight: <span id="playerCount"></span></p>
+                </div>
+                <div>
+                    <span class="icon rotate-80-cw ">
                         <i class="fas fa-3x fa-hand-point-down"></i>
                     </span>
+                    <span class='signUp has-text-centered text-shadow-drop-center'>Sign up here</span>     
                 </div>
+                <div>
+                    <span class='freePlay text-shadow-drop-center'>Free to enter and play!</span>
+                </div>   
+
             </div>
         </div>
     </section>
