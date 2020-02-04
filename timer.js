@@ -1,5 +1,5 @@
 var start = new Date;
-start.setHours(18, 0, 0); // 7 pm 0 min 0 sec
+start.setHours(19, 0, 0); // 7 pm 0 min 0 sec
 
 function pad(num) {
   var l = parseInt(num).toString().length;
@@ -18,6 +18,7 @@ function tick() {
       // hh + ":" + mm + ":" + ss;
       mm + ":" + ss;
     setTimeout(tick, 1000);
+    setTimeout(setPlayerCount, 60000)
   } else {
     document.getElementById('time').innerHTML =
       "Now!";
