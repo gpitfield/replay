@@ -18,7 +18,6 @@ function tick() {
       // hh + ":" + mm + ":" + ss;
       mm + ":" + ss;
     setTimeout(tick, 1000);
-    setTimeout(setPlayerCount, 60000)
   } else {
     document.getElementById('time').innerHTML =
       "Now!";
