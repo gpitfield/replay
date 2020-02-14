@@ -18,33 +18,36 @@
             ready()
         }
         function ready() {
-            setPlayerCount()
-            tick()
+            listPlayers()
         }
     </script>
 </head>
 
 <body>
     <section class="hero is-fullheight is-dark is-bold">
+        <div class="hero-head">
+            <div class="title has-text-centered">
+                <p>Registered Players</p>
+            </div>
+        </div>
         <div class="hero-body">
             <div class="container">
-                <div class="has-text-centered">
-                    <div class="container startTime">
-                        <p>REPLAY pinball starts <span id="preposition">in</span></p>
-                        <p class="pregame"><span id="time"></span> <span id="units">minutes</span></p>
-                        <p class="is-hidden" id="countdown">10</p>
-                        <p class="is-hidden" id="now">Now!</p>
+                <div class="columns is-size-6 players is-vcentered">
+                    <div class="column has-text-centered">
+                        <ul>
+                        </ul>
                     </div>
-                </div>
-                <div class="pregame">
-                    <div class="playerCount">
-                        <p><span id="playerCount">0</span> players registered</p>
+                    <div class="column has-text-centered">
+                        <ul>
+                        </ul>
                     </div>
-                    <div>
-                        <div class="icon rotate-80-cw is-pulled-left">
-                            <i class="fas fa-3x fa-hand-point-down"></i>
-                        </div>
-                        <div class='signUp text-shadow-drop-center'>Sign up here &dash; it's free!</div>
+                    <div class="column has-text-centered">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="column has-text-centered">
+                        <ul>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -1,14 +1,3 @@
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready)
-} else {
-    ready()
-}
-
-function ready() {
-    setPlayerCount()
-    tick()
-}
-
 // Helpers
 function getAjax(url, success) {
     var xhr = new XMLHttpRequest()

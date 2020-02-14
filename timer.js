@@ -25,14 +25,35 @@ function tick() {
     document.getElementById('time').innerHTML = mm
     document.getElementById('units').innerHTML = "minutes"
     setTimeout(tick, 60000);
-  } else if (remain > 0) {
+  } else if (remain >= 11) {
     document.getElementById('preposition').innerHTML = "in"
     document.getElementById('time').innerHTML = ss
     document.getElementById('units').innerHTML = "seconds"
     setTimeout(tick, 1000);
+  } else if (remain >= 1) {
+    var pregames = document.getElementsByClassName('pregame')
+    for (i = 0; i < pregames.length; i++) {
+      pregames[i].classList.add('is-hidden')
+    }
+    document.getElementById('countdown').classList.remove("is-hidden")
+    ss = remain % 60 // no padding
+    document.getElementById('countdown').innerHTML = Math.floor(ss)
+    setTimeout(tick, 1000);
   } else {
+    var pregames = document.getElementsByClassName('pregame')
+    for (i = 0; i < pregames.length; i++) {
+      pregames[i].classList.add('is-hidden')
+    }
+    document.getElementById('now').classList.remove("is-hidden")
     document.getElementById('preposition').innerHTML = ""
-    document.getElementById('time').parentElement.innerHTML = "Now!"
+    document.getElementById('countdown').classList.add('is-hidden')
+    setTimeout(loadAttend, 5000)
   }
 }
 
+function loadAttend() {
+  var urlParams = new URLSearchParams(window.location.search)
+  if (urlParams.has('tournament_id')) {
+    window.location.href = `/attend.html?tournament_id=${urlParams.get('tournament_id')}`
+  }
+}
