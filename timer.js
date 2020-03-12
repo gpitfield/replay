@@ -17,6 +17,7 @@ function tick() {
     document.getElementById('preposition').innerHTML = "at"
     document.getElementById('time').innerHTML = "7pm"
     document.getElementById('units').innerHTML = ""
+    setTimeout(tick, 300000);
   } else if (mm > 0) {
     document.getElementById('preposition').innerHTML = "in"
     document.getElementById('time').innerHTML = mm
